@@ -56,4 +56,4 @@ done
 cd ..
 
 java -jar apktool.jar b discord-$discordver -v
-java -jar uber-apk-signer.jar --apks discord-$discordver/dist/discord.apk -o .
+java -jar uber-apk-signer.jar --apks discord-$discordver/dist/discord-$discordver.apk -o .
