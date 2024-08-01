@@ -11,20 +11,22 @@ fi
 
 cd work
 
-if [ ! -f discord.apk ]; then
-  echo "Downloading discord.apk"
-  wget https://aliucord.com/download/discord?v=126021 -O discord.apk
+discordver=${1:-126021}
+
+if [ ! -f discord-$discordver.apk ]; then
+  echo "Downloading discord-$discordver.apk"
+  wget https://aliucord.com/download/discord?v=$discordver -O discord-$discordver.apk
 fi
 
-if [ -d discord ]; then
+if [ -d discord-$discordver ]; then
   echo "Removing previous discord decompilation"
-  rm -rf discord
+  rm -rf discord-$discordver
 fi
 
-echo "Decompiling discord.apk"
-java -jar apktool.jar d discord.apk
+echo "Decompiling discord-$discordver.apk"
+java -jar apktool.jar d discord-$discordver.apk
 
-cd discord
+cd discord-$discordver
 echo "Patching discord source"
 
 . ../../settings.env
@@ -53,5 +55,5 @@ done
 
 cd ..
 
-java -jar apktool.jar b discord -v
-java -jar uber-apk-signer.jar --apks discord/dist/discord.apk -o .
+java -jar apktool.jar b discord-$discordver -v
+java -jar uber-apk-signer.jar --apks discord-$discordver/dist/discord.apk -o .
