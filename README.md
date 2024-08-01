@@ -8,4 +8,6 @@ Modify `settings.env` file and run `./build.sh`
 
 # Tested versions
 
-- 126.21
+- 127.9 (127109)
+- 127.8 (127108)
+- 126.21 (126021)
