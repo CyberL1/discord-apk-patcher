@@ -1,5 +1,11 @@
 #!/bin/bash
 
+find_version() {
+  if grep "^$1" ../versions.txt; then
+    echo $line;
+  fi
+}
+
 if [ ! -d work ]; then
   echo "Downloading required tools"
   mkdir work
@@ -11,22 +17,31 @@ fi
 
 cd work
 
-discordver=${1:-126021}
+discordver=$(find_version ${1:-126021})
 
-if [ ! -f discord-$discordver.apk ]; then
-  echo "Downloading discord-$discordver.apk"
-  wget https://aliucord.com/download/discord?v=$discordver -O discord-$discordver.apk
+if [[ -z $discordver ]]; then
+  echo "Invalid discord version, exiting"
+  exit 1
 fi
 
-if [ -d discord-$discordver ]; then
+build=$(echo $discordver | cut -d ' ' -f 1)
+version=$(echo $discordver | cut -d ' ' -f 2)
+versionstring=$(echo $discordver | cut -d ' ' -f 2-)
+
+if [ ! -f discord-$build.apk ]; then
+  echo "Downloading discord-$build.apk"
+  wget https://aliucord.com/download/discord?v=$build -O discord-$build.apk
+fi
+
+if [ -d discord-$build ]; then
   echo "Removing previous discord decompilation"
-  rm -rf discord-$discordver
+  rm -rf discord-$build
 fi
 
-echo "Decompiling discord-$discordver.apk"
-java -jar apktool.jar d discord-$discordver.apk
+echo "Decompiling discord-$build.apk"
+java -jar apktool.jar d discord-$build.apk
 
-cd discord-$discordver
+cd discord-$build
 echo "Patching discord source"
 
 . ../../settings.env
@@ -49,11 +64,11 @@ for path in $(find smali* -type f); do
   sed -i "s#https://discord.new#$HOST_GUILD_TEMPLATE#" $path
   sed -i "s#https://discord.gg#$HOST_INVITE#" $path
   sed -i "s#https://media.discordapp.net#$HOST_MEDIA_PROXY#" $path
-  sed -i "s#Discord-Android/126021#$USER_AGENT#" $path
-  sed -i "s#126.21 - Stable#$VERSION_NAME#" $path
+  sed -i "s#Discord-Android/$version#$USER_AGENT#" $path
+  sed -i "s#$versionstring#$VERSION_NAME#" $path
 done
 
 cd ..
 
-java -jar apktool.jar b discord-$discordver -v
-java -jar uber-apk-signer.jar --apks discord-$discordver/dist/discord-$discordver.apk -o .
+java -jar apktool.jar b discord-$build -v
+java -jar uber-apk-signer.jar --apks discord-$build/dist/discord-$build.apk -o .
