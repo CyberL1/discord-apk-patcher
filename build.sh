@@ -31,14 +31,14 @@ echo "Patching discord source"
 
 . ../../settings.env
 
-echo "Pathing manifest"
+echo "Patching manifest"
 
 sed --debug -i "s#package=\"com.discord\"#package=\"$APPLICATION_ID\"#" AndroidManifest.xml
 sed --debug -i "s#@string/discord#$APP_NAME#" AndroidManifest.xml
 sed --debug -i "s#android:authorities=\"com.discord#android:authorities=\"$APPLICATION_ID#" AndroidManifest.xml
 
 for path in $(find smali* -type f); do
-  echo "Pathing: $path"
+  echo "Patching: $path"
 
   sed -i "s#https://discord.com#$HOST#" $path
   sed -i "s#https://discordapp.com#$HOST_ALTERNAME#" $path
