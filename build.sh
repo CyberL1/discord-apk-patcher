@@ -38,7 +38,7 @@ if [ -d discord-$build ]; then
 fi
 
 echo "Decompiling discord-$build.apk"
-java -jar apktool.jar d discord-$build.apk
+java -jar apktool.jar d -f -r discord-$build.apk
 
 cd discord-$build
 echo "Patching discord source"
@@ -53,21 +53,19 @@ sed --debug -i "s#android:authorities=\"com.discord#android:authorities=\"$APPLI
 
 for path in $(find smali* -type f); do
   echo "Patching: $path"
-
-  sed -i "s#https://discord.com#$HOST#" $path
-  sed -i "s#https://discordapp.com#$HOST_ALTERNAME#" $path
-  sed -i "s#https://discord.com/api/#$HOST_API#" $path
-  sed -i "s#https://cdn.discordapp.com#$HOST_CDN#" $path
-  sed -i "s#https://discord.com/developers#$HOST_DEVELOPER_PORTAL#" $path
-  sed -i "s#https://discord.gift#$HOST_GIFT#" $path
-  sed -i "s#https://discord.new#$HOST_GUILD_TEMPLATE#" $path
-  sed -i "s#https://discord.gg#$HOST_INVITE#" $path
-  sed -i "s#https://media.discordapp.net#$HOST_MEDIA_PROXY#" $path
-  sed -i "s#Discord-Android/$version#$USER_AGENT#" $path
-  sed -i "s#$versionstring#$VERSION_NAME#" $path
+sed -i -e "s#https://discord.com#$HOST#g" \
+           -e "s#https://discordapp.com#$HOST_ALTERNAME#g" \
+           -e "s#https://discord.com/api/#$HOST_API#g" \
+           -e "s#https://cdn.discordapp.com#$HOST_CDN#g" \
+           -e "s#https://discord.com/developers#$HOST_DEVELOPER_PORTAL#g" \
+           -e "s#https://discord.gift#$HOST_GIFT#g" \
+           -e "s#https://discord.new#$HOST_GUILD_TEMPLATE#g" \
+           -e "s#https://discord.gg#$HOST_INVITE#g" \
+           -e "s#https://media.discordapp.net#$HOST_MEDIA_PROXY#g" \
+           -e "s#Discord-Android/$version#$USER_AGENT#g" \
+           -e "s#$versionstring#$VERSION_NAME#g" "$path"
 done
-
 cd ..
 
-java -jar apktool.jar b discord-$build -v
+java -jar apktool.jar b -f -r discord-$build -v
 java -jar uber-apk-signer.jar --apks discord-$build/dist/discord-$build.apk -o .
