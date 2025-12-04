@@ -47,24 +47,28 @@ echo "Patching discord source"
 
 echo "Patching manifest"
 
-sed --debug -i "s#package=\"com.discord\"#package=\"$APPLICATION_ID\"#" AndroidManifest.xml
-sed --debug -i "s#@string/discord#$APP_NAME#" AndroidManifest.xml
-sed --debug -i "s#android:authorities=\"com.discord#android:authorities=\"$APPLICATION_ID#" AndroidManifest.xml
+sed --debug -i \
+ -e "s#package=\"com.discord\"#package=\"$APPLICATION_ID\"#" \
+ -e "s#@string/discord#$APP_NAME#" AndroidManifest.xml \
+ -e "s#android:authorities=\"com.discord#android:authorities=\"$APPLICATION_ID#" \
+  AndroidManifest.xml
 
 for path in $(find smali* -type f); do
   echo "Patching: $path"
 
-  sed -i "s#https://discord.com#$HOST#" $path
-  sed -i "s#https://discordapp.com#$HOST_ALTERNAME#" $path
-  sed -i "s#https://discord.com/api/#$HOST_API#" $path
-  sed -i "s#https://cdn.discordapp.com#$HOST_CDN#" $path
-  sed -i "s#https://discord.com/developers#$HOST_DEVELOPER_PORTAL#" $path
-  sed -i "s#https://discord.gift#$HOST_GIFT#" $path
-  sed -i "s#https://discord.new#$HOST_GUILD_TEMPLATE#" $path
-  sed -i "s#https://discord.gg#$HOST_INVITE#" $path
-  sed -i "s#https://media.discordapp.net#$HOST_MEDIA_PROXY#" $path
-  sed -i "s#Discord-Android/$version#$USER_AGENT#" $path
-  sed -i "s#$versionstring#$VERSION_NAME#" $path
+  sed -i \
+   -e "s#https://discord.com#$HOST#" \
+   -e"s#https://discordapp.com#$HOST_ALTERNAME#" \
+   -e "s#https://discord.com/api/#$HOST_API#" \
+   -e "s#https://cdn.discordapp.com#$HOST_CDN#" \
+   -e "s#https://discord.com/developers#$HOST_DEVELOPER_PORTAL#" \
+   -e "s#https://discord.gift#$HOST_GIFT#" \
+   -e "s#https://discord.new#$HOST_GUILD_TEMPLATE#" \
+   -e "s#https://discord.gg#$HOST_INVITE#" \
+   -e "s#https://media.discordapp.net#$HOST_MEDIA_PROXY#" \
+   -e "s#Discord-Android/$version#$USER_AGENT#" \
+   -e "s#$versionstring#$VERSION_NAME#" \
+   $path
 done
 
 cd ..
