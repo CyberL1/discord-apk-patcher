@@ -1,0 +1,11 @@
+--- smali_classes2/com/discord/widgets/auth/WidgetOauth2AuthorizeSamsung.smali
++++ smali_classes2/com/discord/widgets/auth/WidgetOauth2AuthorizeSamsung.smali
+@@ -661,7 +661,7 @@
+ 
+     const/4 v5, 0x0
+ 
+-    const-string v6, "https://discord.com/api/v6/oauth2/samsung/authorize/callback"
++    const-string v6, "$HOST_API/v6/oauth2/samsung/authorize/callback"
+ 
+     .line 3
+     invoke-static/range {v1 .. v14}, Lcom/discord/widgets/auth/WidgetOauth2Authorize$OAuth2Authorize;->copy$default(Lcom/discord/widgets/auth/WidgetOauth2Authorize$OAuth2Authorize;JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Lcom/discord/widgets/auth/WidgetOauth2Authorize$OAuth2Authorize;

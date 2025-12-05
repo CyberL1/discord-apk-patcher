@@ -1,0 +1,11 @@
+--- smali_classes2/com/discord/widgets/guildscheduledevent/WidgetGuildScheduledEventCreateSuccess.smali
++++ smali_classes2/com/discord/widgets/guildscheduledevent/WidgetGuildScheduledEventCreateSuccess.smali
+@@ -505,7 +505,7 @@
+ .method private final getInviteLink(Lcom/discord/models/domain/ModelInvite;)Ljava/lang/String;
+     .locals 2
+ 
+-    const-string v0, "https://discord.gg"
++    const-string v0, "$HOST_INVITE"
+ 
+     if-nez p1, :cond_0
+ 

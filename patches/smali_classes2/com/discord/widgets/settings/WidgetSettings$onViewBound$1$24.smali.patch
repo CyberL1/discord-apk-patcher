@@ -1,0 +1,11 @@
+--- smali_classes2/com/discord/widgets/settings/WidgetSettings$onViewBound$1$24.smali
++++ smali_classes2/com/discord/widgets/settings/WidgetSettings$onViewBound$1$24.smali
+@@ -85,7 +85,7 @@
+ 
+     move-result-object v1
+ 
+-    const-string v2, "https://discord.com/acknowledgements"
++    const-string v2, "$HOST/acknowledgements"
+ 
+     const/4 v3, 0x0
+ 

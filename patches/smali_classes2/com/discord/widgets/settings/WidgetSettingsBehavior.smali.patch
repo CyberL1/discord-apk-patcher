@@ -1,0 +1,20 @@
+--- smali_classes2/com/discord/widgets/settings/WidgetSettingsBehavior.smali
++++ smali_classes2/com/discord/widgets/settings/WidgetSettingsBehavior.smali
+@@ -50,7 +50,7 @@
+ # static fields
+ .field public static final synthetic $$delegatedProperties:[Lkotlin/reflect/KProperty;
+ 
+-.field private static final API_LINK:Ljava/lang/String; = "https://discord.com/developers/docs/intro"
++.field private static final API_LINK:Ljava/lang/String; = "$HOST_DEVELOPER_PORTAL/docs/intro"
+ 
+ .field public static final Companion:Lcom/discord/widgets/settings/WidgetSettingsBehavior$Companion;
+ 
+@@ -232,7 +232,7 @@
+ 
+     new-array v6, v0, [Ljava/lang/Object;
+ 
+-    const-string v7, "https://discord.com/developers/docs/intro"
++    const-string v7, "$HOST_DEVELOPER_PORTAL/docs/intro"
+ 
+     aput-object v7, v6, p1
+ 

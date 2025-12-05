@@ -1,0 +1,11 @@
+--- smali/com/discord/models/invite/InviteUtils.smali
++++ smali/com/discord/models/invite/InviteUtils.smali
+@@ -75,7 +75,7 @@
+ 
+     const/4 v1, 0x1
+ 
+-    const-string v2, "https://discord.gg"
++    const-string v2, "$HOST_INVITE"
+ 
+     const/4 v3, 0x0
+ 

@@ -1,0 +1,54 @@
+--- AndroidManifest.xml
++++ AndroidManifest.xml
+@@ -1,4 +1,4 @@
+-<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="30" android:compileSdkVersionCodename="11" android:installLocation="auto" package="com.discord" platformBuildVersionCode="30" platformBuildVersionName="11">
++<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="30" android:compileSdkVersionCodename="11" android:installLocation="auto" package="$APPLICATION_ID" platformBuildVersionCode="30" platformBuildVersionName="11">
+     <uses-feature android:name="android.hardware.camera" android:required="false"/>
+     <uses-feature android:name="android.hardware.camera.autofocus" android:required="false"/>
+     <uses-feature android:name="android.hardware.faketouch" android:required="false"/>
+@@ -63,7 +63,7 @@
+     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+     <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"/>
+     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+-    <application android:allowBackup="false" android:appCategory="social" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:icon="@mipmap/ic_logo_square" android:label="@string/discord" android:largeHeap="true" android:name="com.discord.app.App" android:networkSecurityConfig="@xml/network_security_config" android:roundIcon="@mipmap/ic_logo_round" android:supportsRtl="true" android:theme="@style/AppTheme.Dark">
++    <application android:allowBackup="false" android:appCategory="social" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:icon="@mipmap/ic_logo_square" android:label="$APP_NAME" android:largeHeap="true" android:name="com.discord.app.App" android:networkSecurityConfig="@xml/network_security_config" android:roundIcon="@mipmap/ic_logo_round" android:supportsRtl="true" android:theme="@style/AppTheme.Dark">
+         <activity android:name="com.discord.samsung.SamsungConnectActivity" android:theme="@style/AppTheme.Translucent"/>
+         <activity android:name="com.discord.app.AppActivity" android:screenOrientation="fullUser" android:theme="@style/AppTheme.Dark" android:windowSoftInputMode="adjustResize|stateHidden"/>
+         <activity android:exported="true" android:launchMode="singleTask" android:name="com.discord.app.AppActivity$Main" android:screenOrientation="fullUser" android:theme="@style/AppTheme.Loading" android:windowSoftInputMode="adjustResize|stateHidden">
+@@ -146,7 +146,7 @@
+         </activity>
+         <activity android:excludeFromRecents="true" android:launchMode="singleTask" android:name="com.discord.app.AppActivity$Call"/>
+         <activity android:excludeFromRecents="true" android:launchMode="singleTask" android:name="com.discord.app.AppActivity$IncomingCall" android:showOnLockScreen="true" android:showWhenLocked="true" android:turnScreenOn="true"/>
+-        <activity android:exported="true" android:label="@string/discord" android:launchMode="standard" android:name="com.discord.app.AppActivity$AppAction" android:theme="@style/AppTheme.Loading" android:windowSoftInputMode="adjustResize|stateHidden">
++        <activity android:exported="true" android:label="$APP_NAME" android:launchMode="standard" android:name="com.discord.app.AppActivity$AppAction" android:theme="@style/AppTheme.Loading" android:windowSoftInputMode="adjustResize|stateHidden">
+             <intent-filter>
+                 <action android:name="com.discord.intent.action.SDK"/>
+                 <category android:name="android.intent.category.DEFAULT"/>
+@@ -192,7 +192,7 @@
+             </intent-filter>
+         </receiver>
+         <service android:foregroundServiceType="mediaProjection" android:name="com.discord.utilities.voice.VoiceEngineForegroundService"/>
+-        <provider android:authorities="com.discord.file-provider" android:exported="false" android:grantUriPermissions="true" android:name="androidx.core.content.FileProvider">
++        <provider android:authorities="$APPLICATION_ID.file-provider" android:exported="false" android:grantUriPermissions="true" android:name="androidx.core.content.FileProvider">
+             <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_paths"/>
+         </provider>
+         <meta-data android:name="firebase_crashlytics_collection_enabled" android:value="true"/>
+@@ -236,9 +236,9 @@
+         <receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver"/>
+         <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService"/>
+         <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+-        <provider android:authorities="com.discord.firebaseinitprovider" android:directBootAware="true" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider"/>
++        <provider android:authorities="$APPLICATION_ID.firebaseinitprovider" android:directBootAware="true" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider"/>
+         <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+-        <provider android:authorities="com.discord.workmanager-init" android:directBootAware="false" android:exported="false" android:multiprocess="true" android:name="androidx.work.impl.WorkManagerInitializer"/>
++        <provider android:authorities="$APPLICATION_ID.workmanager-init" android:directBootAware="false" android:exported="false" android:multiprocess="true" android:name="androidx.work.impl.WorkManagerInitializer"/>
+         <service android:directBootAware="false" android:enabled="@bool/enable_system_alarm_service_default" android:exported="false" android:name="androidx.work.impl.background.systemalarm.SystemAlarmService"/>
+         <service android:directBootAware="false" android:enabled="@bool/enable_system_job_service_default" android:exported="true" android:name="androidx.work.impl.background.systemjob.SystemJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+         <service android:directBootAware="false" android:enabled="@bool/enable_system_foreground_service_default" android:exported="false" android:name="androidx.work.impl.foreground.SystemForegroundService"/>
+@@ -293,4 +293,4 @@
+         <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:exported="false" android:name="com.android.billingclient.api.ProxyBillingActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+         <meta-data android:name="com.android.vending.derived.apk.id" android:value="1"/>
+     </application>
+-</manifest>
+\ No newline at end of file
++</manifest>

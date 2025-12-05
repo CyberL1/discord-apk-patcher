@@ -1,0 +1,11 @@
+--- smali_classes2/com/discord/widgets/guilds/invite/GuildInviteUiHelperKt.smali
++++ smali_classes2/com/discord/widgets/guilds/invite/GuildInviteUiHelperKt.smali
+@@ -174,7 +174,7 @@
+ .method private static final getInviteLink(Lcom/discord/models/domain/ModelInvite;Landroid/content/res/Resources;)Ljava/lang/String;
+     .locals 1
+ 
+-    const-string v0, "https://discord.gg"
++    const-string v0, "$HOST_INVITE"
+ 
+     if-nez p0, :cond_0
+ 

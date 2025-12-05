@@ -1,0 +1,56 @@
+--- smali_classes2/com/discord/stores/StoreMaskedLinks.smali
++++ smali_classes2/com/discord/stores/StoreMaskedLinks.smali
+@@ -134,7 +134,7 @@
+ 
+     new-array v1, v1, [Ljava/lang/String;
+ 
+-    const-string v2, "https://discord.com"
++    const-string v2, "$HOST"
+ 
+     .line 1
+     invoke-static {v0, v2}, Lcom/discord/stores/StoreMaskedLinks$Companion;->access$getDomainName(Lcom/discord/stores/StoreMaskedLinks$Companion;Ljava/lang/String;)Ljava/lang/String;
+@@ -145,7 +145,7 @@
+ 
+     aput-object v2, v1, v3
+ 
+-    const-string v2, "https://discordapp.com"
++    const-string v2, "$HOST_ALTERNATE"
+ 
+     .line 2
+     invoke-static {v0, v2}, Lcom/discord/stores/StoreMaskedLinks$Companion;->access$getDomainName(Lcom/discord/stores/StoreMaskedLinks$Companion;Ljava/lang/String;)Ljava/lang/String;
+@@ -156,7 +156,7 @@
+ 
+     aput-object v2, v1, v3
+ 
+-    const-string v2, "https://cdn.discordapp.com"
++    const-string v2, "$HOST_CDN"
+ 
+     .line 3
+     invoke-static {v0, v2}, Lcom/discord/stores/StoreMaskedLinks$Companion;->access$getDomainName(Lcom/discord/stores/StoreMaskedLinks$Companion;Ljava/lang/String;)Ljava/lang/String;
+@@ -167,7 +167,7 @@
+ 
+     aput-object v2, v1, v3
+ 
+-    const-string v2, "https://discord.gift"
++    const-string v2, "$HOST_GIFT"
+ 
+     .line 4
+     invoke-static {v0, v2}, Lcom/discord/stores/StoreMaskedLinks$Companion;->access$getDomainName(Lcom/discord/stores/StoreMaskedLinks$Companion;Ljava/lang/String;)Ljava/lang/String;
+@@ -178,7 +178,7 @@
+ 
+     aput-object v2, v1, v3
+ 
+-    const-string v2, "https://discord.gg"
++    const-string v2, "$HOST_INVITE"
+ 
+     .line 5
+     invoke-static {v0, v2}, Lcom/discord/stores/StoreMaskedLinks$Companion;->access$getDomainName(Lcom/discord/stores/StoreMaskedLinks$Companion;Ljava/lang/String;)Ljava/lang/String;
+@@ -189,7 +189,7 @@
+ 
+     aput-object v2, v1, v3
+ 
+-    const-string v2, "https://discord.new"
++    const-string v2, "$HOST_GUILD_TEMPLATE"
+ 
+     .line 6
+     invoke-static {v0, v2}, Lcom/discord/stores/StoreMaskedLinks$Companion;->access$getDomainName(Lcom/discord/stores/StoreMaskedLinks$Companion;Ljava/lang/String;)Ljava/lang/String;

@@ -1,0 +1,11 @@
+--- smali_classes2/com/discord/widgets/settings/WidgetSettingsBehavior$onViewBound$2$1.smali
++++ smali_classes2/com/discord/widgets/settings/WidgetSettingsBehavior$onViewBound$2$1.smali
+@@ -73,7 +73,7 @@
+ 
+     invoke-static {v1, v2}, Ld0/z/d/m;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+ 
+-    const-string v2, "https://discord.com/developers/docs/intro"
++    const-string v2, "$HOST_DEVELOPER_PORTAL/docs/intro"
+ 
+     const/4 v3, 0x0
+ 

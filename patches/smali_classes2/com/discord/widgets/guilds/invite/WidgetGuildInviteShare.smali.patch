@@ -1,0 +1,11 @@
+--- smali_classes2/com/discord/widgets/guilds/invite/WidgetGuildInviteShare.smali
++++ smali_classes2/com/discord/widgets/guilds/invite/WidgetGuildInviteShare.smali
+@@ -876,7 +876,7 @@
+ .method private final getInviteLink(Lcom/discord/models/domain/ModelInvite;)Ljava/lang/String;
+     .locals 2
+ 
+-    const-string v0, "https://discord.gg"
++    const-string v0, "$HOST_INVITE"
+ 
+     if-nez p1, :cond_0
+ 

@@ -1,0 +1,11 @@
+--- smali_classes2/com/discord/widgets/servers/WidgetServerSettingsVanityUrl.smali
++++ smali_classes2/com/discord/widgets/servers/WidgetServerSettingsVanityUrl.smali
+@@ -329,7 +329,7 @@
+     :goto_0
+     if-ne v5, v4, :cond_1
+ 
+-    const-string v5, "https://discord.gg/"
++    const-string v5, "$HOST_INVITE/"
+ 
+     .line 4
+     invoke-static {v5, p1}, Lb/d/b/a/a;->w(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;

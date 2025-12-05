@@ -1,0 +1,11 @@
+--- smali_classes2/com/discord/widgets/chat/list/adapter/WidgetChatListAdapterItemGift$Companion.smali
++++ smali_classes2/com/discord/widgets/chat/list/adapter/WidgetChatListAdapterItemGift$Companion.smali
+@@ -79,7 +79,7 @@
+ .method private final getDiscordStoreURL(J)Ljava/lang/String;
+     .locals 1
+ 
+-    const-string v0, "https://discord.com/store/skus/"
++    const-string v0, "$HOST/store/skus/"
+ 
+     .line 1
+     invoke-static {v0, p1, p2}, Lb/d/b/a/a;->t(Ljava/lang/String;J)Ljava/lang/String;
