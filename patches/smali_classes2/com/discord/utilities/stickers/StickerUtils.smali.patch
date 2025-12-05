@@ -1,0 +1,29 @@
+--- smali_classes2/com/discord/utilities/stickers/StickerUtils.smali
++++ smali_classes2/com/discord/utilities/stickers/StickerUtils.smali
+@@ -1169,7 +1169,7 @@
+ 
+     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+ 
+-    const-string v1, "https://cdn.discordapp.com/app-assets/710982414301790216/store/"
++    const-string v1, "$HOST_CDN/app-assets/710982414301790216/store/"
+ 
+     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+ 
+@@ -1261,7 +1261,7 @@
+     goto :goto_0
+ 
+     :cond_0
+-    const-string p2, "https://discord.com/stickers/"
++    const-string p2, "$HOST/stickers/"
+ 
+     .line 2
+     invoke-static {p2}, Lb/d/b/a/a;->U(Ljava/lang/String;)Ljava/lang/StringBuilder;
+@@ -1287,7 +1287,7 @@
+     goto :goto_0
+ 
+     :cond_1
+-    const-string v0, "https://media.discordapp.net/stickers/"
++    const-string v0, "$HOST_MEDIA_PROXY/stickers/"
+ 
+     .line 3
+     invoke-static {v0}, Lb/d/b/a/a;->U(Ljava/lang/String;)Ljava/lang/StringBuilder;

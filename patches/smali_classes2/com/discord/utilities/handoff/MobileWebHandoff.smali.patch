@@ -1,0 +1,11 @@
+--- smali_classes2/com/discord/utilities/handoff/MobileWebHandoff.smali
++++ smali_classes2/com/discord/utilities/handoff/MobileWebHandoff.smali
+@@ -407,7 +407,7 @@
+ 
+     invoke-static {p2, p1}, Ld0/z/d/m;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+ 
+-    const-string p1, "https://discord.com"
++    const-string p1, "$HOST"
+ 
+     .line 9
+     invoke-static {p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;

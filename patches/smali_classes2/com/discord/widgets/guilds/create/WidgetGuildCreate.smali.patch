@@ -1,0 +1,20 @@
+--- smali_classes2/com/discord/widgets/guilds/create/WidgetGuildCreate.smali
++++ smali_classes2/com/discord/widgets/guilds/create/WidgetGuildCreate.smali
+@@ -98,7 +98,7 @@
+ 
+ .field public static final EXTRA_OPTIONS:Ljava/lang/String; = "com.discord.intent.extra.EXTRA_OPTIONS"
+ 
+-.field private static final GUIDELINES_URL:Ljava/lang/String; = "https://discord.com/guidelines"
++.field private static final GUIDELINES_URL:Ljava/lang/String; = "$HOST/guidelines"
+ 
+ 
+ # instance fields
+@@ -1021,7 +1021,7 @@
+ 
+     const/4 v3, 0x0
+ 
+-    const-string v4, "https://discord.com/guidelines"
++    const-string v4, "$HOST/guidelines"
+ 
+     aput-object v4, v2, v3
+ 

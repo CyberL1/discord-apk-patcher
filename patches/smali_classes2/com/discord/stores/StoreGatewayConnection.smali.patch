@@ -1,0 +1,11 @@
+--- smali_classes2/com/discord/stores/StoreGatewayConnection.smali
++++ smali_classes2/com/discord/stores/StoreGatewayConnection.smali
+@@ -2444,7 +2444,7 @@
+ 
+     sget-object v3, Lcom/discord/utilities/rest/RestAPI$AppHeadersProvider;->INSTANCE:Lcom/discord/utilities/rest/RestAPI$AppHeadersProvider;
+ 
+-    const-string v6, "https://discord.com/api/"
++    const-string v6, "$HOST_API"
+ 
+     invoke-direct {v7, v6, v3, v0}, Lcom/discord/gateway/rest/RestConfig;-><init>(Ljava/lang/String;Lcom/discord/restapi/RequiredHeadersInterceptor$HeadersProvider;Ljava/util/List;)V
+ 

@@ -1,0 +1,11 @@
+--- smali_classes2/com/discord/widgets/guildscheduledevent/GuildScheduledEventUrlUtils.smali
++++ smali_classes2/com/discord/widgets/guildscheduledevent/GuildScheduledEventUrlUtils.smali
+@@ -74,7 +74,7 @@
+ 
+     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+ 
+-    const-string v1, "https://discord.com"
++    const-string v1, "$HOST"
+ 
+     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+ 

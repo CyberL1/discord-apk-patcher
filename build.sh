@@ -14,6 +14,34 @@ if [ ! -d work ]; then
   wget https://github.com/patrickfav/uber-apk-signer/releases/download/v1.3.0/uber-apk-signer-1.3.0.jar -O work/uber-apk-signer.jar
 fi
 
+if [ -d work/patches ]; then
+  rm -rf work/patches
+fi
+
+mkdir work/patches
+. ./settings.env
+
+find patches -type f | while IFS= read -r file; do
+  mkdir -p work/$(dirname $file)
+
+  sed \
+    -e "s#android:authorities=\"\$APPLICATION_ID\"#android:authorities=\"$APPLICAITON_ID\"#" \
+    -e "s#package=\"\$APPLICATION_ID\"#package=\"$APPLICATION_ID\"#" \
+    -e "s#\$APP_NAME#$APP_NAME#" \
+    -e "s#\$HOST_ALTERNATE#$HOST_ALTERNATE#" \
+    -e "s#\$HOST_API#$HOST_API#" \
+    -e "s#\$HOST_CDN#$HOST_CDN#" \
+    -e "s#\$HOST_DEVELOPER_PORTAL#$HOST_DEVELOPER_PORTAL#" \
+    -e "s#\$HOST_GIFT#$HOST_GIFT#" \
+    -e "s#\$HOST_GUILD_TEMPLATE#$HOST_GUILD_TEMPLATE#" \
+    -e "s#\$HOST_INVITE#$HOST_INVITE#" \
+    -e "s#\$HOST_MEDIA_PROXY#$HOST_MEDIA_PROXY#" \
+    -e "s#\$USER_AGENT#$USER_AGENT#" \
+    -e "s#\$VERSION_NAME#$VERSION_NAME#" \
+    -e "s#\$HOST#$HOST#" \
+    $file > work/$file
+done
+
 cd work
 
 discordver=$(find_version ${1:-126021})
@@ -43,32 +71,8 @@ java -jar apktool.jar d discord-$build.apk
 cd discord-$build
 echo "Patching discord source"
 
-. ../../settings.env
-
-echo "Patching manifest"
-
-sed --debug -i \
- -e "s#package=\"com.discord\"#package=\"$APPLICATION_ID\"#" \
- -e "s#@string/discord#$APP_NAME#" AndroidManifest.xml \
- -e "s#android:authorities=\"com.discord#android:authorities=\"$APPLICATION_ID#" \
-  AndroidManifest.xml
-
-for path in $(find smali* -type f); do
-  echo "Patching: $path"
-
-  sed -i \
-   -e "s#https://discord.com#$HOST#" \
-   -e"s#https://discordapp.com#$HOST_ALTERNAME#" \
-   -e "s#https://discord.com/api/#$HOST_API#" \
-   -e "s#https://cdn.discordapp.com#$HOST_CDN#" \
-   -e "s#https://discord.com/developers#$HOST_DEVELOPER_PORTAL#" \
-   -e "s#https://discord.gift#$HOST_GIFT#" \
-   -e "s#https://discord.new#$HOST_GUILD_TEMPLATE#" \
-   -e "s#https://discord.gg#$HOST_INVITE#" \
-   -e "s#https://media.discordapp.net#$HOST_MEDIA_PROXY#" \
-   -e "s#Discord-Android/$version#$USER_AGENT#" \
-   -e "s#$versionstring#$VERSION_NAME#" \
-   $path
+find ../patches -type f | while IFS= read -r file; do
+  patch -p0 -i $file
 done
 
 cd ..
