@@ -1,0 +1,11 @@
+--- smali_classes2/com/discord/widgets/guilds/invite/GuildInviteShareSheetViewModel.smali
++++ smali_classes2/com/discord/widgets/guilds/invite/GuildInviteShareSheetViewModel.smali.modified
+@@ -679,7 +679,7 @@
+     goto :goto_0
+ 
+     :cond_0
+-    const-string v0, "https://discord.gg"
++    const-string v0, "$HOST_INVITE"
+ 
+     :goto_0
+     move-object v6, p2

@@ -1,0 +1,20 @@
+--- smali_classes2/com/discord/widgets/channels/WidgetTextInVoiceOnboarding.smali
++++ smali_classes2/com/discord/widgets/channels/WidgetTextInVoiceOnboarding.smali
+@@ -66,7 +66,7 @@
+ 
+ .field public static final Companion:Lcom/discord/widgets/channels/WidgetTextInVoiceOnboarding$Companion;
+ 
+-.field public static final VIDEO_URL:Ljava/lang/String; = "https://cdn.discordapp.com/attachments/727325253608538113/942859496601043024/Text_in_Voice_NUX_Mobile_In-App.mp4"
++.field public static final VIDEO_URL:Ljava/lang/String; = "$HOST_CDN/attachments/727325253608538113/942859496601043024/Text_in_Voice_NUX_Mobile_In-App.mp4"
+ 
+ 
+ # instance fields
+@@ -410,7 +410,7 @@
+ 
+     invoke-virtual {p1, p2}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+ 
+-    const-string p1, "https://cdn.discordapp.com/attachments/727325253608538113/942859496601043024/Text_in_Voice_NUX_Mobile_In-App.mp4"
++    const-string p1, "$HOST_CDN/attachments/727325253608538113/942859496601043024/Text_in_Voice_NUX_Mobile_In-App.mp4"
+ 
+     .line 6
+     invoke-direct {p0, p1}, Lcom/discord/widgets/channels/WidgetTextInVoiceOnboarding;->configureMedia(Ljava/lang/String;)V

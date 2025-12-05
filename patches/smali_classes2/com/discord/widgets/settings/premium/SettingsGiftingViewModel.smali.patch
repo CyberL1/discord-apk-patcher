@@ -1,0 +1,20 @@
+--- smali_classes2/com/discord/widgets/settings/premium/SettingsGiftingViewModel.smali
++++ smali_classes2/com/discord/widgets/settings/premium/SettingsGiftingViewModel.smali
+@@ -1116,7 +1116,7 @@
+     const-string v0, "logo-dark"
+ 
+     :goto_0
+-    const-string v1, "https://cdn.discordapp.com"
++    const-string v1, "$HOST_CDN"
+ 
+     .line 2
+     invoke-interface {v1}, Ljava/lang/CharSequence;->length()I
+@@ -1146,7 +1146,7 @@
+     goto :goto_3
+ 
+     :cond_3
+-    const-string v1, "https://discord.com/api/"
++    const-string v1, "$HOST_API/"
+ 
+     .line 3
+     :goto_3

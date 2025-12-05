@@ -1,0 +1,11 @@
+--- smali_classes2/com/discord/widgets/settings/premium/WidgetSettingsGifting$onViewBound$2.smali
++++ smali_classes2/com/discord/widgets/settings/premium/WidgetSettingsGifting$onViewBound$2.smali
+@@ -108,7 +108,7 @@
+ 
+     move-result-object v1
+ 
+-    const-string v2, "https://discord.gift/"
++    const-string v2, "$HOST_GIFT/"
+ 
+     const-string v3, ""
+ 

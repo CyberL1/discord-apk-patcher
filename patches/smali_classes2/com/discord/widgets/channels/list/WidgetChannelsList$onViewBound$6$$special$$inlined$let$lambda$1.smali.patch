@@ -1,0 +1,11 @@
+--- smali_classes2/com/discord/widgets/channels/list/WidgetChannelsList$onViewBound$6$$special$$inlined$let$lambda$1.smali
++++ smali_classes2/com/discord/widgets/channels/list/WidgetChannelsList$onViewBound$6$$special$$inlined$let$lambda$1.smali
+@@ -111,7 +111,7 @@
+ 
+     move-result-object v2
+ 
+-    const-string v3, "https://discord.gg"
++    const-string v3, "$HOST_INVITE"
+ 
+     invoke-virtual {p1, v2, v3}, Lcom/discord/models/domain/ModelInvite;->toLink(Landroid/content/res/Resources;Ljava/lang/String;)Ljava/lang/String;
+ 

@@ -1,0 +1,47 @@
+--- smali/b/a/d/m0/a.smali
++++ smali/b/a/d/m0/a.smali
+@@ -82,7 +82,7 @@
+ 
+     sput-object v0, Lb/a/d/m0/a;->G:Lb/a/d/m0/a;
+ 
+-    const-string v1, "https://discord.com"
++    const-string v1, "$HOST"
+ 
+     .line 2
+     invoke-virtual {v0, v1}, Lb/a/d/m0/a;->b(Ljava/lang/String;)Ljava/lang/String;
+@@ -91,7 +91,7 @@
+ 
+     sput-object v2, Lb/a/d/m0/a;->a:Ljava/lang/String;
+ 
+-    const-string v1, "https://discordapp.com"
++    const-string v1, "$HOST_ALTERNATE"
+ 
+     .line 3
+     invoke-virtual {v0, v1}, Lb/a/d/m0/a;->b(Ljava/lang/String;)Ljava/lang/String;
+@@ -100,7 +100,7 @@
+ 
+     sput-object v1, Lb/a/d/m0/a;->b:Ljava/lang/String;
+ 
+-    const-string v3, "https://discord.gift"
++    const-string v3, "$HOST_GIFT"
+ 
+     .line 4
+     invoke-virtual {v0, v3}, Lb/a/d/m0/a;->b(Ljava/lang/String;)Ljava/lang/String;
+@@ -109,7 +109,7 @@
+ 
+     sput-object v9, Lb/a/d/m0/a;->c:Ljava/lang/String;
+ 
+-    const-string v3, "https://discord.gg"
++    const-string v3, "$HOST_INVITE"
+ 
+     .line 5
+     invoke-virtual {v0, v3}, Lb/a/d/m0/a;->b(Ljava/lang/String;)Ljava/lang/String;
+@@ -118,7 +118,7 @@
+ 
+     sput-object v10, Lb/a/d/m0/a;->d:Ljava/lang/String;
+ 
+-    const-string v3, "https://discord.new"
++    const-string v3, "$HOST_GUILD_TEMPLATE"
+ 
+     .line 6
+     invoke-virtual {v0, v3}, Lb/a/d/m0/a;->b(Ljava/lang/String;)Ljava/lang/String;

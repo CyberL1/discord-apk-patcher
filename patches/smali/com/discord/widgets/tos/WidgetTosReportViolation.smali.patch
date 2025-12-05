@@ -1,0 +1,11 @@
+--- smali/com/discord/widgets/tos/WidgetTosReportViolation.smali
++++ smali/com/discord/widgets/tos/WidgetTosReportViolation.smali
+@@ -920,7 +920,7 @@
+ 
+     new-array v0, v0, [Ljava/lang/Object;
+ 
+-    const-string v3, "https://discord.com/guidelines"
++    const-string v3, "$HOST/guidelines"
+ 
+     aput-object v3, v0, p1
+ 

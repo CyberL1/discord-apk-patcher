@@ -1,0 +1,11 @@
+--- smali_classes2/com/discord/widgets/contact_sync/WidgetContactSync$configureUI$10.smali
++++ smali_classes2/com/discord/widgets/contact_sync/WidgetContactSync$configureUI$10.smali
+@@ -94,7 +94,7 @@
+ 
+     new-array v1, v1, [Ljava/lang/Object;
+ 
+-    const-string v2, "https://discord.com"
++    const-string v2, "$HOST"
+ 
+     const/4 v3, 0x0
+ 
