@@ -1,0 +1,13 @@
+--- smali_classes2/com/discord/stores/StoreUserPresence.smali
++++ smali_classes2/com/discord/stores/StoreUserPresence.smali
+@@ -1901,10 +1901,6 @@
+         }
+     .end annotation
+ 
+-    const-string/jumbo v0, "status"
+-
+-    invoke-static {p5, v0}, Ld0/z/d/m;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+-
+     const-wide v0, 0x7fffffffffffffffL
+ 
+     const-wide/16 v2, 0x0

@@ -1,0 +1,24 @@
+--- smali/com/discord/models/presence/Presence.smali
++++ smali/com/discord/models/presence/Presence.smali
+@@ -90,10 +90,6 @@
+         }
+     .end annotation
+ 
+-    const-string/jumbo v0, "status"
+-
+-    invoke-static {p1, v0}, Ld0/z/d/m;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+-
+     .line 1
+     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+ 
+@@ -185,10 +181,6 @@
+         }
+     .end annotation
+ 
+-    const-string/jumbo v0, "status"
+-
+-    invoke-static {p1, v0}, Ld0/z/d/m;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+-
+     new-instance v0, Lcom/discord/models/presence/Presence;
+ 
+     invoke-direct {v0, p1, p2, p3}, Lcom/discord/models/presence/Presence;-><init>(Lcom/discord/api/presence/ClientStatus;Lcom/discord/api/presence/ClientStatuses;Ljava/util/List;)V
