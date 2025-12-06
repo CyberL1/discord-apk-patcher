@@ -1,0 +1,17 @@
+--- smali/com/discord/models/domain/ModelUserSettings.smali
++++ smali/com/discord/models/domain/ModelUserSettings.smali
+@@ -566,14 +566,6 @@
+     goto :goto_0
+ 
+     :sswitch_10
+-    const-string v1, "guild_positions"
+-
+-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+-
+-    move-result v0
+-
+-    if-nez v0, :cond_10
+-
+     goto :goto_0
+ 
+     :cond_10
