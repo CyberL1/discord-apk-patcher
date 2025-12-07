@@ -4,7 +4,7 @@ This is a simple bash script that changes some variables in the discord mobile c
 
 # How to use it?
 
-Modify `settings.env` file and run `./build.sh`
+Modify `settings.env` file and run `./build.sh` (or `./build.sh --adb` to test on device)
 
 # Tested versions
 
