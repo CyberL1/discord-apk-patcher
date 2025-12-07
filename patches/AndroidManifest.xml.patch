@@ -33,14 +33,7 @@
                  <category android:name="android.intent.category.DEFAULT"/>
                  <category android:name="android.intent.category.OPENABLE"/>
                  <data android:host="sdk" android:pathPattern="/.*" android:scheme="discord"/>
-@@ -163,36 +163,36 @@
-             <meta-data android:name="android.service.chooser.chooser_target_service" android:value="androidx.sharetarget.ChooserTargetServiceCompat"/>
-         </activity>
-         <activity android:exported="true" android:name="com.facebook.flipper.android.diagnostics.FlipperDiagnosticActivity"/>
--        <service android:exported="false" android:name="com.discord.utilities.fcm.NotificationClient$FCMMessagingService">
-+        <service android:exported="false" android:name="$APPLICATION_ID.utilities.fcm.NotificationClient$FCMMessagingService">
-             <intent-filter>
-                 <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+@@ -169,21 +169,21 @@
                  <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
              </intent-filter>
          </service>
@@ -52,14 +45,12 @@
                  <data android:host="app" android:pathPattern="/connect/.*" android:scheme="discord"/>
              </intent-filter>
          </service>
--        <service android:exported="false" android:name="com.discord.utilities.voice.DiscordOverlayService"/>
+         <service android:exported="false" android:name="com.discord.utilities.voice.DiscordOverlayService"/>
 -        <meta-data android:name="com.discord.features.FLAG" android:value="1"/>
-+        <service android:exported="false" android:name="$APPLICATION_ID.utilities.voice.DiscordOverlayService"/>
 +        <meta-data android:name="$APPLICATION_ID.features.FLAG" android:value="1"/>
          <meta-data android:name="com.google.firebase.messaging.default_notification_icon" android:resource="@drawable/asset_default_avatar_64dp"/>
          <meta-data android:name="com.google.firebase.messaging.default_notification_color" android:resource="@color/brand_new_500"/>
--        <receiver android:exported="false" android:name="com.discord.utilities.fcm.NotificationActions">
-+        <receiver android:exported="false" android:name="$APPLICATION_ID.utilities.fcm.NotificationActions">
+         <receiver android:exported="false" android:name="com.discord.utilities.fcm.NotificationActions">
              <intent-filter>
 -                <action android:name="com.discord.intent.action.ENQUEUE_WORK"/>
 -                <action android:name="com.discord.intent.action.NOTIFICATION_DELETED"/>
@@ -69,15 +60,12 @@
 +                <action android:name="$APPLICATION_ID.intent.action.NOTIFICATION_CANCEL"/>
              </intent-filter>
          </receiver>
--        <receiver android:exported="true" android:name="com.discord.utilities.io.NetworkUtils$NetworkDownloadReceiver">
-+        <receiver android:exported="true" android:name="$APPLICATION_ID.utilities.io.NetworkUtils$NetworkDownloadReceiver">
-             <intent-filter>
-                 <action android:name="android.intent.action.DOWNLOAD_COMPLETE"/>
+         <receiver android:exported="true" android:name="com.discord.utilities.io.NetworkUtils$NetworkDownloadReceiver">
+@@ -192,7 +192,7 @@
              </intent-filter>
          </receiver>
--        <service android:foregroundServiceType="mediaProjection" android:name="com.discord.utilities.voice.VoiceEngineForegroundService"/>
+         <service android:foregroundServiceType="mediaProjection" android:name="com.discord.utilities.voice.VoiceEngineForegroundService"/>
 -        <provider android:authorities="com.discord.file-provider" android:exported="false" android:grantUriPermissions="true" android:name="androidx.core.content.FileProvider">
-+        <service android:foregroundServiceType="mediaProjection" android:name="$APPLICATION_ID.utilities.voice.VoiceEngineForegroundService"/>
 +        <provider android:authorities="$APPLICATION_ID.file-provider" android:exported="false" android:grantUriPermissions="true" android:name="androidx.core.content.FileProvider">
              <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_paths"/>
          </provider>
