@@ -1,5 +1,12 @@
 #!/bin/bash
 
+source ./settings.env
+
+if [[  "$1" == "--adb" ]]; then
+  ADB=true
+  shift
+fi
+
 find_version() {
   if grep "^$1" ../versions.txt; then
     echo $line;
@@ -19,7 +26,6 @@ if [ -d work/patches ]; then
 fi
 
 mkdir work/patches
-. ./settings.env
 
 find patches -type f | while IFS= read -r file; do
   mkdir -p work/$(dirname $file)
@@ -79,3 +85,14 @@ cd ..
 
 java -jar apktool.jar b discord-$build -v
 java -jar uber-apk-signer.jar --apks discord-$build/dist/discord-$build.apk -o .
+
+if test $ADB; then
+  echo "Installing APK on the emulator"
+  adb install discord-$build-aligned-debugSigned.apk
+
+  echo "Opening application"
+  adb shell monkey -p $APPLICATION_ID -c android.intent.category.LAUNCHER 1
+
+  echo "Showing app logs"
+  adb logcat -v color -e $APPLICATION_ID
+fi
