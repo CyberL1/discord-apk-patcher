@@ -25,7 +25,7 @@ find patches -type f | while IFS= read -r file; do
   mkdir -p work/$(dirname $file)
 
   sed \
-    -e "s#android:authorities=\"\$APPLICATION_ID\"#android:authorities=\"$APPLICAITON_ID\"#" \
+    -e "s#android:authorities=\"\$APPLICATION_ID\"#android:authorities=\"$APPLICATION_ID\"#" \
     -e "s#package=\"\$APPLICATION_ID\"#package=\"$APPLICATION_ID\"#" \
     -e "s#\$APP_NAME#$APP_NAME#" \
     -e "s#\$HOST_ALTERNATE#$HOST_ALTERNATE#" \
