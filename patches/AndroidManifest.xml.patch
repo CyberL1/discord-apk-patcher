@@ -15,31 +15,18 @@
      <queries>
          <intent>
              <action android:name="android.intent.action.CHOOSER"/>
-@@ -63,10 +63,10 @@
-     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+@@ -64,7 +64,7 @@
      <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"/>
      <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
--    <application android:allowBackup="false" android:appCategory="social" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:icon="@mipmap/ic_logo_square" android:label="@string/discord" android:largeHeap="true" android:name="com.discord.app.App" android:networkSecurityConfig="@xml/network_security_config" android:roundIcon="@mipmap/ic_logo_round" android:supportsRtl="true" android:theme="@style/AppTheme.Dark">
+     <application android:allowBackup="false" android:appCategory="social" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:icon="@mipmap/ic_logo_square" android:label="@string/discord" android:largeHeap="true" android:name="com.discord.app.App" android:networkSecurityConfig="@xml/network_security_config" android:roundIcon="@mipmap/ic_logo_round" android:supportsRtl="true" android:theme="@style/AppTheme.Dark">
 -        <activity android:name="com.discord.samsung.SamsungConnectActivity" android:theme="@style/AppTheme.Translucent"/>
--        <activity android:name="com.discord.app.AppActivity" android:screenOrientation="fullUser" android:theme="@style/AppTheme.Dark" android:windowSoftInputMode="adjustResize|stateHidden"/>
--        <activity android:exported="true" android:launchMode="singleTask" android:name="com.discord.app.AppActivity$Main" android:screenOrientation="fullUser" android:theme="@style/AppTheme.Loading" android:windowSoftInputMode="adjustResize|stateHidden">
-+    <application android:allowBackup="false" android:appCategory="social" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:icon="@mipmap/ic_logo_square" android:label="@string/discord" android:largeHeap="true" android:name="$APPLICATION_ID.app.App" android:networkSecurityConfig="@xml/network_security_config" android:roundIcon="@mipmap/ic_logo_round" android:supportsRtl="true" android:theme="@style/AppTheme.Dark">
 +        <activity android:name="$APPLICATION_ID.samsung.SamsungConnectActivity" android:theme="@style/AppTheme.Translucent"/>
-+        <activity android:name="$APPLICATION_ID.app.AppActivity" android:screenOrientation="fullUser" android:theme="@style/AppTheme.Dark" android:windowSoftInputMode="adjustResize|stateHidden"/>
-+        <activity android:exported="true" android:launchMode="singleTask" android:name="$APPLICATION_ID.app.AppActivity$Main" android:screenOrientation="fullUser" android:theme="@style/AppTheme.Loading" android:windowSoftInputMode="adjustResize|stateHidden">
+         <activity android:name="com.discord.app.AppActivity" android:screenOrientation="fullUser" android:theme="@style/AppTheme.Dark" android:windowSoftInputMode="adjustResize|stateHidden"/>
+         <activity android:exported="true" android:launchMode="singleTask" android:name="com.discord.app.AppActivity$Main" android:screenOrientation="fullUser" android:theme="@style/AppTheme.Loading" android:windowSoftInputMode="adjustResize|stateHidden">
              <intent-filter>
-                 <action android:name="android.intent.action.MAIN"/>
-                 <category android:name="android.intent.category.LAUNCHER"/>
-@@ -144,11 +144,11 @@
-             </intent-filter>
-             <meta-data android:name="android.app.shortcuts" android:resource="@xml/shortcuts"/>
-         </activity>
--        <activity android:excludeFromRecents="true" android:launchMode="singleTask" android:name="com.discord.app.AppActivity$Call"/>
--        <activity android:excludeFromRecents="true" android:launchMode="singleTask" android:name="com.discord.app.AppActivity$IncomingCall" android:showOnLockScreen="true" android:showWhenLocked="true" android:turnScreenOn="true"/>
--        <activity android:exported="true" android:label="@string/discord" android:launchMode="standard" android:name="com.discord.app.AppActivity$AppAction" android:theme="@style/AppTheme.Loading" android:windowSoftInputMode="adjustResize|stateHidden">
-+        <activity android:excludeFromRecents="true" android:launchMode="singleTask" android:name="$APPLICATION_ID.app.AppActivity$Call"/>
-+        <activity android:excludeFromRecents="true" android:launchMode="singleTask" android:name="$APPLICATION_ID.app.AppActivity$IncomingCall" android:showOnLockScreen="true" android:showWhenLocked="true" android:turnScreenOn="true"/>
-+        <activity android:exported="true" android:label="@string/discord" android:launchMode="standard" android:name="$APPLICATION_ID.app.AppActivity$AppAction" android:theme="@style/AppTheme.Loading" android:windowSoftInputMode="adjustResize|stateHidden">
+@@ -148,7 +148,7 @@
+         <activity android:excludeFromRecents="true" android:launchMode="singleTask" android:name="com.discord.app.AppActivity$IncomingCall" android:showOnLockScreen="true" android:showWhenLocked="true" android:turnScreenOn="true"/>
+         <activity android:exported="true" android:label="@string/discord" android:launchMode="standard" android:name="com.discord.app.AppActivity$AppAction" android:theme="@style/AppTheme.Loading" android:windowSoftInputMode="adjustResize|stateHidden">
              <intent-filter>
 -                <action android:name="com.discord.intent.action.SDK"/>
 +                <action android:name="$APPLICATION_ID.intent.action.SDK"/>
@@ -58,7 +45,7 @@
              </intent-filter>
          </service>
 -        <service android:exported="true" android:name="com.discord.app.DiscordConnectService" android:permission="com.discord.permission.CONNECT">
-+        <service android:exported="true" android:name="$APPLICATION_ID.app.DiscordConnectService" android:permission="$APPLICATION_ID.permission.CONNECT">
++        <service android:exported="true" android:name="com.discord.app.DiscordConnectService" android:permission="$APPLICATION_ID.permission.CONNECT">
              <intent-filter>
 -                <action android:name="com.discord.intent.action.CONNECT"/>
 +                <action android:name="$APPLICATION_ID.intent.action.CONNECT"/>
