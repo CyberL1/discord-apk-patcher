@@ -31,19 +31,19 @@ find patches -type f | while IFS= read -r file; do
   mkdir -p work/$(dirname $file)
 
   sed \
-    -e "s#\$APPLICATION_ID#$APPLICATION_ID#" \
-    -e "s#\$APP_NAME#$APP_NAME#" \
-    -e "s#\$HOST_ALTERNATE#$HOST_ALTERNATE#" \
-    -e "s#\$HOST_API#$HOST_API#" \
-    -e "s#\$HOST_CDN#$HOST_CDN#" \
-    -e "s#\$HOST_DEVELOPER_PORTAL#$HOST_DEVELOPER_PORTAL#" \
-    -e "s#\$HOST_GIFT#$HOST_GIFT#" \
-    -e "s#\$HOST_GUILD_TEMPLATE#$HOST_GUILD_TEMPLATE#" \
-    -e "s#\$HOST_INVITE#$HOST_INVITE#" \
-    -e "s#\$HOST_MEDIA_PROXY#$HOST_MEDIA_PROXY#" \
-    -e "s#\$USER_AGENT#$USER_AGENT#" \
-    -e "s#\$VERSION_NAME#$VERSION_NAME#" \
-    -e "s#\$HOST#$HOST#" \
+    -e "s#\$APPLICATION_ID#$APPLICATION_ID#g" \
+    -e "s#\$APP_NAME#$APP_NAME#g" \
+    -e "s#\$HOST_ALTERNATE#$HOST_ALTERNATE#g" \
+    -e "s#\$HOST_API#$HOST_API#g" \
+    -e "s#\$HOST_CDN#$HOST_CDN#g" \
+    -e "s#\$HOST_DEVELOPER_PORTAL#$HOST_DEVgELOPER_PORTAL#" \
+    -e "s#\$HOST_GIFT#$HOST_GIFT#g" \
+    -e "s#\$HOST_GUILD_TEMPLATE#$HOST_GUILDg_TEMPLATE#" \
+    -e "s#\$HOST_INVITE#$HOST_INVITE#g" \
+    -e "s#\$HOST_MEDIA_PROXY#$HOST_MEDIA_PRgOXY#" \
+    -e "s#\$USER_AGENT#$USER_AGENT#g" \
+    -e "s#\$VERSION_NAME#$VERSION_NAME#g" \
+    -e "s#\$HOST#$HOST#g" \
     $file > work/$file
 done
 
