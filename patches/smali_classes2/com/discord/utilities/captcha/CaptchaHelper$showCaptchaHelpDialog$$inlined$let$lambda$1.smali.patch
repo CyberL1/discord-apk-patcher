@@ -1,6 +1,6 @@
 --- smali_classes2/com/discord/utilities/captcha/CaptchaHelper$showCaptchaHelpDialog$$inlined$let$lambda$1.smali
 +++ smali_classes2/com/discord/utilities/captcha/CaptchaHelper$showCaptchaHelpDialog$$inlined$let$lambda$1.smali
-@@ -104,7 +104,7 @@
+@@ -104,7 +104,7 @@ .method public final invoke(Landroid/view/View;)V
      .line 3
      new-instance v0, Landroid/content/Intent;
  

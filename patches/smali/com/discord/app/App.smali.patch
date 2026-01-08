@@ -1,6 +1,6 @@
 --- smali/com/discord/app/App.smali
 +++ smali/com/discord/app/App.smali
-@@ -420,7 +420,7 @@
+@@ -420,7 +420,7 @@ .method public onCreate()V
  
      invoke-virtual {v0, v2}, Lcom/discord/utilities/view/text/LinkifiedTextView$Companion;->init(Lkotlin/jvm/functions/Function2;)Lkotlin/Unit;
  

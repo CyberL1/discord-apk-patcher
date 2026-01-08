@@ -1,6 +1,6 @@
 --- smali_classes2/com/discord/utilities/gifting/GiftingUtils.smali
 +++ smali_classes2/com/discord/utilities/gifting/GiftingUtils.smali
-@@ -591,7 +591,7 @@
+@@ -591,7 +591,7 @@ .method public final generateGiftUrl(Ljava/lang/String
  
      invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
  

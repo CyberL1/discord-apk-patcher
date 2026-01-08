@@ -1,6 +1,6 @@
 --- smali_classes2/com/discord/utilities/handoff/MobileWebHandoff.smali
 +++ smali_classes2/com/discord/utilities/handoff/MobileWebHandoff.smali
-@@ -407,7 +407,7 @@
+@@ -407,7 +407,7 @@ .method public final synthetic redirectWithHandoffToke
  
      invoke-static {p2, p1}, Ld0/z/d/m;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
  

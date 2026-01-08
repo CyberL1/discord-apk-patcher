@@ -1,6 +1,6 @@
 --- smali_classes2/com/discord/widgets/guilds/invite/WidgetGuildInviteShareViewModel.smali
 +++ smali_classes2/com/discord/widgets/guilds/invite/WidgetGuildInviteShareViewModel.smali
-@@ -799,7 +799,7 @@
+@@ -799,7 +799,7 @@ .method private final getInviteLink(Lcom/discord/model
  .method private final getInviteLink(Lcom/discord/models/domain/ModelInvite;)Ljava/lang/String;
      .locals 2
  

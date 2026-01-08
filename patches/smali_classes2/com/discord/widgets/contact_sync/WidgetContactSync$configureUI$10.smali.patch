@@ -1,6 +1,6 @@
 --- smali_classes2/com/discord/widgets/contact_sync/WidgetContactSync$configureUI$10.smali
 +++ smali_classes2/com/discord/widgets/contact_sync/WidgetContactSync$configureUI$10.smali
-@@ -94,7 +94,7 @@
+@@ -94,7 +94,7 @@ .method public final onClick(Landroid/view/View;)V
  
      new-array v1, v1, [Ljava/lang/Object;
  

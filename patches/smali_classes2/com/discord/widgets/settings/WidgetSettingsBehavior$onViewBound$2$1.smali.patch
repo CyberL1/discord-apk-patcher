@@ -1,6 +1,6 @@
 --- smali_classes2/com/discord/widgets/settings/WidgetSettingsBehavior$onViewBound$2$1.smali
 +++ smali_classes2/com/discord/widgets/settings/WidgetSettingsBehavior$onViewBound$2$1.smali
-@@ -73,7 +73,7 @@
+@@ -73,7 +73,7 @@ .method public final call()V
  
      invoke-static {v1, v2}, Ld0/z/d/m;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
  

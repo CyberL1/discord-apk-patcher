@@ -1,6 +1,6 @@
 --- smali_classes2/com/discord/widgets/servers/WidgetServerSettingsVanityUrl.smali
 +++ smali_classes2/com/discord/widgets/servers/WidgetServerSettingsVanityUrl.smali
-@@ -329,7 +329,7 @@
+@@ -329,7 +329,7 @@ .method private final configureInviteCode(Ljava/lang/S
      :goto_0
      if-ne v5, v4, :cond_1
  

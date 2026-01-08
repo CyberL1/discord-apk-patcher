@@ -1,6 +1,6 @@
 --- smali_classes2/com/discord/utilities/rest/RestAPI$Companion.smali
 +++ smali_classes2/com/discord/utilities/rest/RestAPI$Companion.smali
-@@ -369,7 +369,7 @@
+@@ -369,7 +369,7 @@ .method public final init(Landroid/content/Context;)V
      .line 9
      new-instance v1, Lcom/discord/restapi/RestAPIBuilder;
  

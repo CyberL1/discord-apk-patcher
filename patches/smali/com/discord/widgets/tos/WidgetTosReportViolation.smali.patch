@@ -1,6 +1,6 @@
 --- smali/com/discord/widgets/tos/WidgetTosReportViolation.smali
 +++ smali/com/discord/widgets/tos/WidgetTosReportViolation.smali
-@@ -920,7 +920,7 @@
+@@ -920,7 +920,7 @@ .method public onViewBound(Landroid/view/View;)V
  
      new-array v0, v0, [Ljava/lang/Object;
  
