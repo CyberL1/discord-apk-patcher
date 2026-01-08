@@ -1,6 +1,6 @@
 --- smali_classes2/com/discord/widgets/guilds/invite/GuildInviteUiHelperKt.smali
 +++ smali_classes2/com/discord/widgets/guilds/invite/GuildInviteUiHelperKt.smali
-@@ -174,7 +174,7 @@
+@@ -174,7 +174,7 @@ .method private static final getInviteLink(Lcom/discor
  .method private static final getInviteLink(Lcom/discord/models/domain/ModelInvite;Landroid/content/res/Resources;)Ljava/lang/String;
      .locals 1
  

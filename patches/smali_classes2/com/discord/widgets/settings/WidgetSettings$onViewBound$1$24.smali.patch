@@ -1,6 +1,6 @@
 --- smali_classes2/com/discord/widgets/settings/WidgetSettings$onViewBound$1$24.smali
 +++ smali_classes2/com/discord/widgets/settings/WidgetSettings$onViewBound$1$24.smali
-@@ -85,7 +85,7 @@
+@@ -85,7 +85,7 @@ .method public final onClick(Landroid/view/View;)V
  
      move-result-object v1
  

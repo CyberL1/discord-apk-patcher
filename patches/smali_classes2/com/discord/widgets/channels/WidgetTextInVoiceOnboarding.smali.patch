@@ -9,7 +9,7 @@
  
  
  # instance fields
-@@ -410,7 +410,7 @@
+@@ -410,7 +410,7 @@ .method public onViewCreated(Landroid/view/View;Landro
  
      invoke-virtual {p1, p2}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
  

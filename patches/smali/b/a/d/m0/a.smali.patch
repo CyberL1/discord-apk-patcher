@@ -1,6 +1,6 @@
 --- smali/b/a/d/m0/a.smali
 +++ smali/b/a/d/m0/a.smali
-@@ -82,7 +82,7 @@
+@@ -82,7 +82,7 @@ .method public static constructor <clinit>()V
  
      sput-object v0, Lb/a/d/m0/a;->G:Lb/a/d/m0/a;
  
@@ -9,7 +9,7 @@
  
      .line 2
      invoke-virtual {v0, v1}, Lb/a/d/m0/a;->b(Ljava/lang/String;)Ljava/lang/String;
-@@ -91,7 +91,7 @@
+@@ -91,7 +91,7 @@ .method public static constructor <clinit>()V
  
      sput-object v2, Lb/a/d/m0/a;->a:Ljava/lang/String;
  
@@ -18,7 +18,7 @@
  
      .line 3
      invoke-virtual {v0, v1}, Lb/a/d/m0/a;->b(Ljava/lang/String;)Ljava/lang/String;
-@@ -100,7 +100,7 @@
+@@ -100,7 +100,7 @@ .method public static constructor <clinit>()V
  
      sput-object v1, Lb/a/d/m0/a;->b:Ljava/lang/String;
  
@@ -27,7 +27,7 @@
  
      .line 4
      invoke-virtual {v0, v3}, Lb/a/d/m0/a;->b(Ljava/lang/String;)Ljava/lang/String;
-@@ -109,7 +109,7 @@
+@@ -109,7 +109,7 @@ .method public static constructor <clinit>()V
  
      sput-object v9, Lb/a/d/m0/a;->c:Ljava/lang/String;
  
@@ -36,7 +36,7 @@
  
      .line 5
      invoke-virtual {v0, v3}, Lb/a/d/m0/a;->b(Ljava/lang/String;)Ljava/lang/String;
-@@ -118,7 +118,7 @@
+@@ -118,7 +118,7 @@ .method public static constructor <clinit>()V
  
      sput-object v10, Lb/a/d/m0/a;->d:Ljava/lang/String;
  

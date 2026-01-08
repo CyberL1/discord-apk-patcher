@@ -9,7 +9,7 @@
  
  .field public static final Companion:Lcom/discord/widgets/settings/WidgetSettingsBehavior$Companion;
  
-@@ -232,7 +232,7 @@
+@@ -232,7 +232,7 @@ .method public onViewBound(Landroid/view/View;)V
  
      new-array v6, v0, [Ljava/lang/Object;
  

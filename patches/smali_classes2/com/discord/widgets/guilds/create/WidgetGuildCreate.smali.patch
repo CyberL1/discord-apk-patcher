@@ -9,7 +9,7 @@
  
  
  # instance fields
-@@ -1021,7 +1021,7 @@
+@@ -1021,7 +1021,7 @@ .method public onResume()V
  
      const/4 v3, 0x0
  

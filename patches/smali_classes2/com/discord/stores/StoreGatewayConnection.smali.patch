@@ -1,6 +1,6 @@
 --- smali_classes2/com/discord/stores/StoreGatewayConnection.smali
 +++ smali_classes2/com/discord/stores/StoreGatewayConnection.smali
-@@ -2444,7 +2444,7 @@
+@@ -2444,7 +2444,7 @@ .method private final buildGatewaySocket(Landroid/cont
  
      sget-object v3, Lcom/discord/utilities/rest/RestAPI$AppHeadersProvider;->INSTANCE:Lcom/discord/utilities/rest/RestAPI$AppHeadersProvider;
  

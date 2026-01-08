@@ -1,6 +1,6 @@
 --- smali/com/discord/models/invite/InviteUtils.smali
 +++ smali/com/discord/models/invite/InviteUtils.smali
-@@ -75,7 +75,7 @@
+@@ -75,7 +75,7 @@ .method public final createLinkFromCode(Ljava/lang/Str
  
      const/4 v1, 0x1
  

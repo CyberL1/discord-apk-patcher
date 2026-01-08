@@ -1,6 +1,6 @@
 --- smali_classes2/com/discord/widgets/guilds/invite/WidgetGuildInviteShareEmptySuggestions.smali
-+++ smali_classes2/com/discord/widgets/guilds/invite/WidgetGuildInviteShareEmptySuggestions.smali.
-@@ -334,7 +334,7 @@
++++ smali_classes2/com/discord/widgets/guilds/invite/WidgetGuildInviteShareEmptySuggestions.smali
+@@ -334,7 +334,7 @@ .method private final getInviteLink(Lcom/discord/model
  .method private final getInviteLink(Lcom/discord/models/domain/ModelInvite;)Ljava/lang/String;
      .locals 2
  

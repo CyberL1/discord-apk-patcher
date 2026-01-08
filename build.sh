@@ -77,7 +77,7 @@ cd discord-$build
 echo "Patching discord source"
 
 find ../patches -type f | while IFS= read -r file; do
-  patch -p0 -i $file
+  patch --verbose --forward --unified -i $file
 done
 
 cd ..
