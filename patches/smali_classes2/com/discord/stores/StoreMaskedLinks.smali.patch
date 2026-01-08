@@ -1,6 +1,6 @@
 --- smali_classes2/com/discord/stores/StoreMaskedLinks.smali
 +++ smali_classes2/com/discord/stores/StoreMaskedLinks.smali
-@@ -134,7 +134,7 @@
+@@ -134,7 +134,7 @@ .method public static constructor <clinit>()V
  
      new-array v1, v1, [Ljava/lang/String;
  
@@ -9,16 +9,16 @@
  
      .line 1
      invoke-static {v0, v2}, Lcom/discord/stores/StoreMaskedLinks$Companion;->access$getDomainName(Lcom/discord/stores/StoreMaskedLinks$Companion;Ljava/lang/String;)Ljava/lang/String;
-@@ -145,7 +145,7 @@
+@@ -145,7 +145,7 @@ .method public static constructor <clinit>()V
  
      aput-object v2, v1, v3
  
 -    const-string v2, "https://discordapp.com"
-+    const-string v2, "$HOST_ALTERNATE"
++    const-string v2, "$HOST"
  
      .line 2
      invoke-static {v0, v2}, Lcom/discord/stores/StoreMaskedLinks$Companion;->access$getDomainName(Lcom/discord/stores/StoreMaskedLinks$Companion;Ljava/lang/String;)Ljava/lang/String;
-@@ -156,7 +156,7 @@
+@@ -156,7 +156,7 @@ .method public static constructor <clinit>()V
  
      aput-object v2, v1, v3
  
@@ -27,7 +27,7 @@
  
      .line 3
      invoke-static {v0, v2}, Lcom/discord/stores/StoreMaskedLinks$Companion;->access$getDomainName(Lcom/discord/stores/StoreMaskedLinks$Companion;Ljava/lang/String;)Ljava/lang/String;
-@@ -167,7 +167,7 @@
+@@ -167,7 +167,7 @@ .method public static constructor <clinit>()V
  
      aput-object v2, v1, v3
  
@@ -36,7 +36,7 @@
  
      .line 4
      invoke-static {v0, v2}, Lcom/discord/stores/StoreMaskedLinks$Companion;->access$getDomainName(Lcom/discord/stores/StoreMaskedLinks$Companion;Ljava/lang/String;)Ljava/lang/String;
-@@ -178,7 +178,7 @@
+@@ -178,7 +178,7 @@ .method public static constructor <clinit>()V
  
      aput-object v2, v1, v3
  
@@ -45,7 +45,7 @@
  
      .line 5
      invoke-static {v0, v2}, Lcom/discord/stores/StoreMaskedLinks$Companion;->access$getDomainName(Lcom/discord/stores/StoreMaskedLinks$Companion;Ljava/lang/String;)Ljava/lang/String;
-@@ -189,7 +189,7 @@
+@@ -189,7 +189,7 @@ .method public static constructor <clinit>()V
  
      aput-object v2, v1, v3
  

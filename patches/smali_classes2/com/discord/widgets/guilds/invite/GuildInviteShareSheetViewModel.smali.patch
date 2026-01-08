@@ -1,6 +1,6 @@
 --- smali_classes2/com/discord/widgets/guilds/invite/GuildInviteShareSheetViewModel.smali
-+++ smali_classes2/com/discord/widgets/guilds/invite/GuildInviteShareSheetViewModel.smali.modified
-@@ -679,7 +679,7 @@
++++ smali_classes2/com/discord/widgets/guilds/invite/GuildInviteShareSheetViewModel.smali
+@@ -679,7 +679,7 @@ .method private final createViewState(Ljava/lang/Strin
      goto :goto_0
  
      :cond_0

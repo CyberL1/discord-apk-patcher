@@ -1,6 +1,6 @@
 --- smali_classes2/com/discord/widgets/chat/list/adapter/WidgetChatListAdapterItemGift$Companion.smali
 +++ smali_classes2/com/discord/widgets/chat/list/adapter/WidgetChatListAdapterItemGift$Companion.smali
-@@ -79,7 +79,7 @@
+@@ -79,7 +79,7 @@ .method private final getDiscordStoreURL(J)Ljava/lang/
  .method private final getDiscordStoreURL(J)Ljava/lang/String;
      .locals 1
  

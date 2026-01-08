@@ -1,6 +1,6 @@
 --- smali_classes2/com/discord/widgets/channels/list/WidgetChannelsList$onViewBound$6$$special$$inlined$let$lambda$1.smali
 +++ smali_classes2/com/discord/widgets/channels/list/WidgetChannelsList$onViewBound$6$$special$$inlined$let$lambda$1.smali
-@@ -111,7 +111,7 @@
+@@ -111,7 +111,7 @@ .method public final invoke(Lcom/discord/models/domain
  
      move-result-object v2
  

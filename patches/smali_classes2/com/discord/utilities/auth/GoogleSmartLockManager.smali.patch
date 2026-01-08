@@ -9,7 +9,7 @@
  
  .field public static final ENABLE_SMART_LOCK:Z = false
  
-@@ -648,7 +648,7 @@
+@@ -648,7 +648,7 @@ .method public final requestCredentials(Lcom/discord/a
  
      const/4 v3, 0x1
  

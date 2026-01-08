@@ -1,6 +1,6 @@
 --- smali_classes2/com/discord/utilities/icon/IconUtils.smali
 +++ smali_classes2/com/discord/utilities/icon/IconUtils.smali
-@@ -626,7 +626,7 @@
+@@ -626,7 +626,7 @@ .method public static final getApplicationIcon(JLjava/
  
      invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
  
@@ -9,7 +9,7 @@
  
      invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
  
-@@ -743,7 +743,7 @@
+@@ -743,7 +743,7 @@ .method private final getAssetPlatformUrl(Ljava/lang/S
  
      if-eqz p1, :cond_2
  
@@ -18,7 +18,7 @@
  
      invoke-static {p1, p2}, Lb/d/b/a/a;->w(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
  
-@@ -884,7 +884,7 @@
+@@ -884,7 +884,7 @@ .method public static final getForChannel(JLjava/lang/
      return-object p0
  
      :cond_4
@@ -27,7 +27,7 @@
  
      .line 3
      invoke-interface {p3}, Ljava/lang/CharSequence;->length()I
-@@ -903,7 +903,7 @@
+@@ -903,7 +903,7 @@ .method public static final getForChannel(JLjava/lang/
  
      invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
  
@@ -36,7 +36,7 @@
  
      invoke-virtual {p3, p4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
  
-@@ -933,7 +933,7 @@
+@@ -933,7 +933,7 @@ .method public static final getForChannel(JLjava/lang/
  
      invoke-direct {p4}, Ljava/lang/StringBuilder;-><init>()V
  
@@ -45,7 +45,7 @@
  
      invoke-virtual {p4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
  
-@@ -1290,7 +1290,7 @@
+@@ -1290,7 +1290,7 @@ .method public static final getForGuild(Ljava/lang/Lon
  
      invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
  
@@ -54,7 +54,7 @@
  
      invoke-interface {v1}, Ljava/lang/CharSequence;->length()I
  
-@@ -1313,7 +1313,7 @@
+@@ -1313,7 +1313,7 @@ .method public static final getForGuild(Ljava/lang/Lon
  
      invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
  
@@ -63,7 +63,7 @@
  
      invoke-virtual {p3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
  
-@@ -1350,7 +1350,7 @@
+@@ -1350,7 +1350,7 @@ .method public static final getForGuild(Ljava/lang/Lon
  
      invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
  
@@ -72,7 +72,7 @@
  
      invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
  
-@@ -1803,7 +1803,7 @@
+@@ -1803,7 +1803,7 @@ .method public static final getForUser(Ljava/lang/Long
      :cond_0
      if-eqz p1, :cond_3
  
@@ -81,7 +81,7 @@
  
      .line 6
      invoke-interface {p2}, Ljava/lang/CharSequence;->length()I
-@@ -1822,7 +1822,7 @@
+@@ -1822,7 +1822,7 @@ .method public static final getForUser(Ljava/lang/Long
  
      invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
  
@@ -90,7 +90,7 @@
  
      invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
  
-@@ -1857,7 +1857,7 @@
+@@ -1857,7 +1857,7 @@ .method public static final getForUser(Ljava/lang/Long
  
      invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
  
@@ -99,7 +99,7 @@
  
      invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
  
-@@ -4036,7 +4036,7 @@
+@@ -4036,7 +4036,7 @@ .method public final getAssetImage(Ljava/lang/Long;Lja
  
      invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
  
@@ -108,7 +108,7 @@
  
      invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
  
-@@ -4137,7 +4137,7 @@
+@@ -4137,7 +4137,7 @@ .method public final getBannerForGuild(Ljava/lang/Long
  
      invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
  
@@ -117,7 +117,7 @@
  
      invoke-interface {v2}, Ljava/lang/CharSequence;->length()I
  
-@@ -4160,7 +4160,7 @@
+@@ -4160,7 +4160,7 @@ .method public final getBannerForGuild(Ljava/lang/Long
  
      invoke-direct {p4}, Ljava/lang/StringBuilder;-><init>()V
  
@@ -126,7 +126,7 @@
  
      invoke-virtual {p4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
  
-@@ -4193,7 +4193,7 @@
+@@ -4193,7 +4193,7 @@ .method public final getBannerForGuild(Ljava/lang/Long
  
      invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
  
@@ -135,7 +135,7 @@
  
      invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
  
-@@ -4373,7 +4373,7 @@
+@@ -4373,7 +4373,7 @@ .method public final getForGuildMember(Ljava/lang/Stri
  
      invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
  
@@ -144,7 +144,7 @@
  
      invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
  
-@@ -4464,7 +4464,7 @@
+@@ -4464,7 +4464,7 @@ .method public final getForGuildMemberBanner(Ljava/lan
  
      invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
  
@@ -153,7 +153,7 @@
  
      invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
  
-@@ -4578,7 +4578,7 @@
+@@ -4578,7 +4578,7 @@ .method public final getForUserBanner(JLjava/lang/Stri
  
      invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
  
@@ -162,7 +162,7 @@
  
      invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
  
-@@ -4746,7 +4746,7 @@
+@@ -4746,7 +4746,7 @@ .method public final getGiftSplashUrl(JLjava/lang/Stri
  
      invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
  
@@ -171,7 +171,7 @@
  
      invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
  
-@@ -4807,7 +4807,7 @@
+@@ -4807,7 +4807,7 @@ .method public final getGuildSplashUrl(JLjava/lang/Str
      move-object p4, v0
  
      :goto_0
@@ -180,7 +180,7 @@
  
      .line 2
      invoke-interface {v1}, Ljava/lang/CharSequence;->length()I
-@@ -4831,7 +4831,7 @@
+@@ -4831,7 +4831,7 @@ .method public final getGuildSplashUrl(JLjava/lang/Str
  
      invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
  
@@ -189,7 +189,7 @@
  
      invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
  
-@@ -4859,7 +4859,7 @@
+@@ -4859,7 +4859,7 @@ .method public final getGuildSplashUrl(JLjava/lang/Str
  
      invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
  
@@ -198,7 +198,7 @@
  
      invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
  
-@@ -5020,7 +5020,7 @@
+@@ -5020,7 +5020,7 @@ .method public final getRoleIconUrl(JLjava/lang/String
      move-object p4, v0
  
      :goto_0
@@ -207,7 +207,7 @@
  
      .line 2
      invoke-interface {v1}, Ljava/lang/CharSequence;->length()I
-@@ -5044,7 +5044,7 @@
+@@ -5044,7 +5044,7 @@ .method public final getRoleIconUrl(JLjava/lang/String
  
      invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
  
@@ -216,7 +216,7 @@
  
      invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
  
-@@ -5072,7 +5072,7 @@
+@@ -5072,7 +5072,7 @@ .method public final getRoleIconUrl(JLjava/lang/String
  
      invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
  
@@ -225,7 +225,7 @@
  
      invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
  
-@@ -5155,7 +5155,7 @@
+@@ -5155,7 +5155,7 @@ .method public final getStoreAssetImage(Ljava/lang/Lon
  
      if-eqz p1, :cond_0
  
@@ -234,7 +234,7 @@
  
      .line 2
      invoke-static {v1}, Ld0/g0/t;->isBlank(Ljava/lang/CharSequence;)Z
-@@ -5171,7 +5171,7 @@
+@@ -5171,7 +5171,7 @@ .method public final getStoreAssetImage(Ljava/lang/Lon
  
      invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
  
@@ -243,7 +243,7 @@
  
      invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
  
-@@ -5201,7 +5201,7 @@
+@@ -5201,7 +5201,7 @@ .method public final getStoreAssetImage(Ljava/lang/Lon
  
      invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
  

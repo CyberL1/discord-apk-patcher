@@ -1,6 +1,6 @@
 --- smali_classes2/com/discord/widgets/auth/WidgetOauth2AuthorizeSamsung.smali
 +++ smali_classes2/com/discord/widgets/auth/WidgetOauth2AuthorizeSamsung.smali
-@@ -661,7 +661,7 @@
+@@ -661,7 +661,7 @@ .method public createOauthAuthorize(Landroid/net/Uri;)
  
      const/4 v5, 0x0
  

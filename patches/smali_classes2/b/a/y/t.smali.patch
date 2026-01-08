@@ -1,6 +1,6 @@
 --- smali_classes2/b/a/y/t.smali
 +++ smali_classes2/b/a/y/t.smali
-@@ -70,7 +70,7 @@
+@@ -70,7 +70,7 @@ .method public invoke(Ljava/lang/Object;)Ljava/lang/Ob
  
      move-result-object v1
  

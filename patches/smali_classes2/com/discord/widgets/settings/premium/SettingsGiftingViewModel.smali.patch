@@ -1,6 +1,6 @@
 --- smali_classes2/com/discord/widgets/settings/premium/SettingsGiftingViewModel.smali
 +++ smali_classes2/com/discord/widgets/settings/premium/SettingsGiftingViewModel.smali
-@@ -1116,7 +1116,7 @@
+@@ -1116,7 +1116,7 @@ .method private final getPromoImageUrl(J)Ljava/lang/St
      const-string v0, "logo-dark"
  
      :goto_0
@@ -9,7 +9,7 @@
  
      .line 2
      invoke-interface {v1}, Ljava/lang/CharSequence;->length()I
-@@ -1146,7 +1146,7 @@
+@@ -1146,7 +1146,7 @@ .method private final getPromoImageUrl(J)Ljava/lang/St
      goto :goto_3
  
      :cond_3

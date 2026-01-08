@@ -1,6 +1,6 @@
 --- smali_classes2/com/discord/widgets/settings/premium/WidgetSettingsGifting$onViewBound$2.smali
 +++ smali_classes2/com/discord/widgets/settings/premium/WidgetSettingsGifting$onViewBound$2.smali
-@@ -108,7 +108,7 @@
+@@ -108,7 +108,7 @@ .method public final invoke(Landroid/widget/TextView;)
  
      move-result-object v1
  
