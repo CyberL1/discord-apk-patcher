@@ -74,24 +74,24 @@ echo "Decompiling discord-$build.apk"
 java -jar apktool.jar d discord-$build.apk
 
 cd discord-$build
-# echo "Patching discord source"
+echo "Patching discord source"
 
-# find ../patches -type f | while IFS= read -r file; do
-#   patch -p0 -i $file
-# done
+find ../patches -type f | while IFS= read -r file; do
+  patch -p0 -i $file
+done
 
-# cd ..
+cd ..
 
-# java -jar apktool.jar b discord-$build -v
-# java -jar uber-apk-signer.jar --apks discord-$build/dist/discord-$build.apk -o .
+java -jar apktool.jar b discord-$build -v
+java -jar uber-apk-signer.jar --apks discord-$build/dist/discord-$build.apk -o .
 
-# if test $ADB; then
-#   echo "Installing APK on the emulator"
-#   adb install discord-$build-aligned-debugSigned.apk
+if test $ADB; then
+  echo "Installing APK on the emulator"
+  adb install discord-$build-aligned-debugSigned.apk
 
-#   echo "Opening application"
-#   adb shell monkey -p $APPLICATION_ID -c android.intent.category.LAUNCHER 1
+  echo "Opening application"
+  adb shell monkey -p $APPLICATION_ID -c android.intent.category.LAUNCHER 1
 
-#   echo "Showing app logs"
-#   adb logcat -v color -e $APPLICATION_ID
-# fi
+  echo "Showing app logs"
+  adb logcat -v color -e $APPLICATION_ID
+fi
