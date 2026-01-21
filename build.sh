@@ -17,7 +17,7 @@ if [ ! -d work ]; then
   echo "Downloading required tools"
   mkdir work
 
-  wget https://bitbucket.org/iBotPeaches/apktool/downloads/apktool_2.9.3.jar -O work/apktool.jar
+  wget https://github.com/iBotPeaches/Apktool/releases/download/v2.9.3/apktool_2.9.3.jar -O work/apktool.jar
   wget https://github.com/patrickfav/uber-apk-signer/releases/download/v1.3.0/uber-apk-signer-1.3.0.jar -O work/uber-apk-signer.jar
 fi
 
