@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 source ./settings.env
 
@@ -17,8 +17,8 @@ if [ ! -d work ]; then
   echo "Downloading required tools"
   mkdir work
 
-  wget https://github.com/iBotPeaches/Apktool/releases/download/v2.9.3/apktool_2.9.3.jar -O work/apktool.jar
-  wget https://github.com/patrickfav/uber-apk-signer/releases/download/v1.3.0/uber-apk-signer-1.3.0.jar -O work/uber-apk-signer.jar
+  curl https://github.com/iBotPeaches/Apktool/releases/download/v2.9.3/apktool_2.9.3.jar -Lo work/apktool.jar
+  curl https://github.com/patrickfav/uber-apk-signer/releases/download/v1.3.0/uber-apk-signer-1.3.0.jar -Lo work/uber-apk-signer.jar
 fi
 
 if [ -d work/patches ]; then
@@ -62,7 +62,7 @@ versionstring=$(echo $discordver | cut -d ' ' -f 2-)
 
 if [ ! -f discord-$build.apk ]; then
   echo "Downloading discord-$build.apk"
-  wget https://aliucord.com/download/discord?v=$build -O discord-$build.apk
+  curl https://aliucord.com/download/discord?v=$build -Lo discord-$build.apk
 fi
 
 if [ -d discord-$build ]; then
