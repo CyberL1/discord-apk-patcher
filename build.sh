@@ -36,11 +36,11 @@ find patches -type f | while IFS= read -r file; do
     -e "s#\$HOST_ALTERNATE#$HOST_ALTERNATE#g" \
     -e "s#\$HOST_API#$HOST_API#g" \
     -e "s#\$HOST_CDN#$HOST_CDN#g" \
-    -e "s#\$HOST_DEVELOPER_PORTAL#$HOST_DEVELOPER_PORTAL#" \
+    -e "s#\$HOST_DEVELOPER_PORTAL#$HOST_DEVELOPER_PORTAL#g" \
     -e "s#\$HOST_GIFT#$HOST_GIFT#g" \
-    -e "s#\$HOST_GUILD_TEMPLATE#$HOST_GUILD_TEMPLATE#" \
+    -e "s#\$HOST_GUILD_TEMPLATE#$HOST_GUILD_TEMPLATE#g" \
     -e "s#\$HOST_INVITE#$HOST_INVITE#g" \
-    -e "s#\$HOST_MEDIA_PROXY#$HOST_MEDIA_PROXY#" \
+    -e "s#\$HOST_MEDIA_PROXY#$HOST_MEDIA_PROXY#g" \
     -e "s#\$USER_AGENT#$USER_AGENT#g" \
     -e "s#\$VERSION_NAME#$VERSION_NAME#g" \
     -e "s#\$HOST#$HOST#g" \
